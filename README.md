@@ -6,7 +6,7 @@ This project demonstrates an end-to-end Natural Language Processing (NLP) pipeli
 
 The goal is to transform unstructured text data into meaningful numerical representations and build a model that can make accurate predictions.
 
----
+
 
 ##  Project Pipeline
 
@@ -16,7 +16,7 @@ The goal is to transform unstructured text data into meaningful numerical repres
 * Checked data types and basic statistics
 * Identified missing values and inconsistencies
 
----
+
 
 ###  2. Data Cleaning
 
@@ -25,7 +25,7 @@ The goal is to transform unstructured text data into meaningful numerical repres
 * Handled missing values
 * Removed stopwords (if applicable)
 
----
+
 
 ###  3. Story Generation & Visualization
 
@@ -36,7 +36,7 @@ The goal is to transform unstructured text data into meaningful numerical repres
   * common patterns in text
 * Generated insights to guide feature engineering
 
----
+
 
 ##  Feature Engineering Techniques
 
@@ -45,28 +45,28 @@ The goal is to transform unstructured text data into meaningful numerical repres
 * Converted text into a matrix of token counts
 * Simple and effective baseline representation
 
----
+
 
 ###  TF-IDF (Term Frequency - Inverse Document Frequency)
 
 * Weighted words based on importance
 * Reduced impact of commonly occurring words
 
----
+
 
 ###  Word2Vec
 
 * Learned word embeddings capturing semantic meaning
 * Represented words in dense vector space
 
----
+
 
 ###  Doc2Vec
 
 * Extended Word2Vec to represent entire documents
 * Captured contextual meaning of text
 
----
+
 
 ##  Model Building
 
@@ -76,7 +76,7 @@ The goal is to transform unstructured text data into meaningful numerical repres
 * Simple, interpretable, and effective baseline
 * Trained on different feature representations (BoW, TF-IDF, etc.)
 
----
+
 
 ##  Evaluation
 
@@ -87,7 +87,7 @@ The goal is to transform unstructured text data into meaningful numerical repres
   * Recall
   * F1-score
 
----
+
 
 ##  Key Learnings
 
@@ -96,7 +96,7 @@ The goal is to transform unstructured text data into meaningful numerical repres
 * Trade-offs between simple and advanced embeddings
 * How feature representation impacts model performance
 
----
+
 
 ##  Future Improvements
 
@@ -105,13 +105,13 @@ The goal is to transform unstructured text data into meaningful numerical repres
 * Deep learning approaches (LSTM, Transformers)
 * Deploy model using Streamlit
 
----
+
 
 ##  Conclusion
 
 This project showcases a complete NLP workflow — from raw text to predictive modeling — and highlights the impact of different feature extraction techniques on model performance.
 
----
+
 
 ## 🔗 Author
 
