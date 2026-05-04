@@ -1,4 +1,4 @@
-#  NLP Pipeline: Text Classification using Machine Learning
+#  Text Classification using Machine Learning
 
 ##  Overview
 
