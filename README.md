@@ -117,6 +117,4 @@ This project showcases a complete NLP workflow — from raw text to predictive m
 
 **Anand R**
 
----
-
-> 🚀 This project is part of my journey to becoming a Machine Learning Engineer.
+>  This project is part of my journey to becoming a Machine Learning Engineer.
