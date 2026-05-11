@@ -1,120 +1,149 @@
-#  Text Classification using Machine Learning
+#  Sentiment Analysis using NLP & Machine Learning
 
-##  Overview
+##  Project Overview
 
-This project demonstrates an end-to-end Natural Language Processing (NLP) pipeline for text classification. It covers everything from raw data inspection to feature extraction and model building using Logistic Regression.
+This project focuses on Sentiment Analysis using various Natural Language Processing (NLP) techniques and Machine Learning models to classify text sentiment as positive or negative.
 
-The goal is to transform unstructured text data into meaningful numerical representations and build a model that can make accurate predictions.
-
-
-
-##  Project Pipeline
-
-###  1. Data Inspection
-
-* Explored dataset structure and features
-* Checked data types and basic statistics
-* Identified missing values and inconsistencies
+The main objective of this project was to explore how different text representation techniques impact model performance.
 
 
+## The project includes:
 
-###  2. Data Cleaning
-
-* Removed noise (punctuation, special characters)
-* Converted text to lowercase
-* Handled missing values
-* Removed stopwords (if applicable)
-
-
-
-###  3. Story Generation & Visualization
-
-* Used visualizations to understand:
-
-  * word frequency
-  * class distribution
-  * common patterns in text
-* Generated insights to guide feature engineering
+Text preprocessing
+Stemming & Lemmatization
+Feature extraction techniques
+Multiple machine learning algorithms
+Model comparison and evaluation
 
 
+## Technologies Used
 
-##  Feature Engineering Techniques
+Python
+Pandas
+NumPy
+Scikit-learn
+NLTK
+Gensim
+XGBoost
+Matplotlib
+Seaborn
 
-###  Bag of Words (BoW)
+## NLP Techniques Used
 
-* Converted text into a matrix of token counts
-* Simple and effective baseline representation
+### Text Preprocessing
 
+The dataset was cleaned using:
 
-
-###  TF-IDF (Term Frequency - Inverse Document Frequency)
-
-* Weighted words based on importance
-* Reduced impact of commonly occurring words
-
-
-
-###  Word2Vec
-
-* Learned word embeddings capturing semantic meaning
-* Represented words in dense vector space
-
-
-
-###  Doc2Vec
-
-* Extended Word2Vec to represent entire documents
-* Captured contextual meaning of text
+Lowercasing
+Removing punctuation
+Removing stopwords
+Tokenization
 
 
+## Stemming
 
-##  Model Building
+Words were reduced to their root forms using stemming.
 
-### Logistic Regression
+Example:
 
-* Used as the primary classification model
-* Simple, interpretable, and effective baseline
-* Trained on different feature representations (BoW, TF-IDF, etc.)
+playing → play
+liked → like
+
+This helped reduce vocabulary size.
+
+## Lemmatization
+
+Lemmatization was applied to convert words into meaningful base forms.
+
+Example:
+
+better → good
+running → run
+
+Compared to stemming, lemmatization preserves proper word meaning.
+
+## Feature Extraction Techniques
+
+The following text vectorization techniques were explored:
+
+### 1. Bag of Words (BoW)
+
+Converts text into frequency-based vectors.
+
+### 2. TF-IDF
+
+Measures word importance based on frequency and rarity across documents.
+
+### 3. Word Vectors
+
+Word embeddings were used to capture semantic relationships between words.
+
+This approach achieved the best performance of 84% accuracy.
+
+### 4. Document Vectors
+
+Document-level embeddings were used to represent complete sentences/documents numerically.
+
+## Machine Learning Models Used
+
+The following models were trained and evaluated:
+
+| Model                        | Purpose                              |
+| ---------------------------- | ------------------------------------ |
+| Logistic Regression          | Baseline linear classifier           |
+| Support Vector Machine (SVM) | High-dimensional text classification |
+| Random Forest                | Ensemble learning                    |
+| XGBoost                      | Boosting-based optimized classifier  |
 
 
+## Best Result
 
-##  Evaluation
-
-* Evaluated model performance using:
-
-  * Accuracy
-  * Precision
-  * Recall
-  * F1-score
+| Technique   | Model                              | Accuracy |
+| ----------- | ---------------------------------- | -------- |
+| Word Vector | XGBoost / SVM *(edit accordingly)* | **84%**  |
 
 
-
-##  Key Learnings
-
-* Importance of data cleaning in NLP
-* Differences between text vectorization techniques
-* Trade-offs between simple and advanced embeddings
-* How feature representation impacts model performance
-
-
-
-##  Future Improvements
-
-* Hyperparameter tuning
-* Try advanced models (SVM, Random Forest, XGBoost)
-* Deep learning approaches (LSTM, Transformers)
-* Deploy model using Streamlit
+## Project Workflow
+1. Data Collection
+2. Text Cleaning
+3. Stemming & Lemmatization
+4. Feature Extraction
+5. Model Training
+6. Hyperparameter Tuning
+7. Model Evaluation
+8. Performance Comparison
+9. Evaluation Metrics
 
 
+## The models were evaluated using:
 
-##  Conclusion
+Accuracy
+Precision
+Recall
+F1-Score
+Confusion Matrix
 
-This project showcases a complete NLP workflow — from raw text to predictive modeling — and highlights the impact of different feature extraction techniques on model performance.
 
+## Key Learnings
+
+Through this project, I learned:
+
+How NLP preprocessing impacts model performance
+Differences between BoW, TF-IDF, Word2Vec, and Doc2Vec
+How different machine learning algorithms behave on text data
+Importance of feature engineering in NLP tasks
+Model tuning and evaluation techniques
+Future Improvements
+
+## Possible future enhancements include:
+
+Deep Learning models (LSTM, GRU)
+Transformer-based models (BERT)
+Deployment using Flask or Streamlit
+Real-time sentiment prediction web app
 
 
 ## 🔗 Author
 
 **Anand R**
-
 >  This project is part of my journey to becoming a Machine Learning Engineer.
