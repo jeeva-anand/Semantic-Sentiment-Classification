@@ -1,20 +1,51 @@
-#  Sentiment Analysis using NLP & Machine Learning
+# Sentiment Analysis using NLP & Machine Learning
 
-##  Project Overview
+## Project Overview
 
 This project focuses on Sentiment Analysis using various Natural Language Processing (NLP) techniques and Machine Learning models to classify text sentiment as positive or negative.
 
 The main objective of this project was to explore how different text representation techniques impact model performance.
 
+```
+semantic-sentiment-classification/
+│
+├── README.md
+│
+├── data/
+│   ├── train_tweets  
+│   └── test_tweets
+│
+├── notebooks/
+│   ├── 01_data_analysis.ipynb
+│   └── 02_preprocessing.ipynb
+|
+├── figures/
+|    ├── confusion_matrix.png
+|    ├── model_accuracy.png
+|    ├── frequency_list.png
+|    ├── wordcloud_overall.png
+|    ├── wordcloud_negative
+|    └── wordcloud_normal.png
+│
+└── src/
+   │
+   ├── vectorizers/
+   │   ├── bow.py
+   │   ├── tfidf.py
+   │   ├── word2vec.py
+   │   └── doc2vec.py
+   │
+   └── models/
+      ├── logistic_regression.py
+      ├── svm.py
+      ├── random_forest.py
+      └── xgboost_model.py
+      
 
-## The project includes:
 
-Text preprocessing
-Stemming & Lemmatization
-Feature extraction techniques
-Multiple machine learning algorithms
-Model comparison and evaluation
 
+
+```
 
 ## Technologies Used
 
@@ -62,6 +93,7 @@ running → run
 
 Compared to stemming, lemmatization preserves proper word meaning.
 
+
 ## Feature Extraction Techniques
 
 The following text vectorization techniques were explored:
@@ -84,10 +116,16 @@ This approach achieved the best performance of 84% accuracy.
 
 Document-level embeddings were used to represent complete sentences/documents numerically.
 
+
+
+```
+
+
 ## Machine Learning Models Used
 
 The following models were trained and evaluated:
 
+```
 | Model                        | Purpose                              |
 | ---------------------------- | ------------------------------------ |
 | Logistic Regression          | Baseline linear classifier           |
@@ -96,24 +134,15 @@ The following models were trained and evaluated:
 | XGBoost                      | Boosting-based optimized classifier  |
 
 
+```
+
 ## Best Result
 
+```
 | Technique   | Model                              | Accuracy |
 | ----------- | ---------------------------------- | -------- |
-| Word Vector | XGBoost / SVM *(edit accordingly)* | **84%**  |
-
-
-## Project Workflow
-1. Data Collection
-2. Text Cleaning
-3. Stemming & Lemmatization
-4. Feature Extraction
-5. Model Training
-6. Hyperparameter Tuning
-7. Model Evaluation
-8. Performance Comparison
-9. Evaluation Metrics
-
+| Word Vector | XGBoost                            | **84%**  |
+```
 
 ## The models were evaluated using:
 
@@ -147,3 +176,4 @@ Real-time sentiment prediction web app
 
 **Anand R**
 >  This project is part of my journey to becoming a Machine Learning Engineer.
+
