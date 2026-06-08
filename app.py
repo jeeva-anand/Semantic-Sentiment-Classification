@@ -1,19 +1,19 @@
 import streamlit as st
+import pickle
 
-from predict import predict_sentiment
+from src.predict import predict_sentiment
 
 
 st.set_page_config(
-    page_title="Twitter Sentiment Analysis",
+    page_title="Text Sentiment Analysis",
     page_icon="😊"
 )
 
-st.title("Twitter Sentiment Analysis")
+st.title("Text Sentiment Analysis")
 
 tweet = st.text_area(
-    "Enter Tweet"
+    "Enter Text"
 )
-
 
 
 if st.button("Analyze"):
