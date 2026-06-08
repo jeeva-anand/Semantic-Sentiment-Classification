@@ -13,8 +13,6 @@ model = pickle.load(
 )
 
 
-
-
 def predict_sentiment(text):
 
     text = clean_tweet(text)
