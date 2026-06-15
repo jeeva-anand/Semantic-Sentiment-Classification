@@ -1,179 +1,143 @@
-# Sentiment Analysis using NLP & Machine Learning
 
-## Project Overview
+# Semantic Sentiment Classification using NLP & Machine Learning
 
-This project focuses on Sentiment Analysis using various Natural Language Processing (NLP) techniques and Machine Learning models to classify text sentiment as positive or negative.
 
-The main objective of this project was to explore how different text representation techniques impact model performance.
+##  Project Overview
+
+This project focuses on **Semantic Sentiment Classification**, where the goal is to classify text into sentiment categories (Positive / Negative / Neutral) by understanding not just surface-level words, but the **semantic meaning behind the text**.
+
+Unlike traditional keyword-based sentiment models, this system leverages **advanced NLP preprocessing and multiple embedding techniques** to capture contextual meaning and improve classification accuracy.
+
+
+
+##  Problem Statement
+
+Human language is highly contextual and ambiguous. Simple rule-based or bag-of-words approaches fail to capture meaning in real-world text such as:
+
+> "I thought the product would be great, but it’s actually not worth the price."
+
+This project addresses the challenge of:
+
+* Understanding semantic meaning in text
+* Handling negation and contextual polarity shifts
+* Building a robust ML pipeline for sentiment prediction
+
+
+
+## Key Features
+
+* End-to-end NLP pipeline (cleaning → vectorization → modeling)
+* Comparison of multiple feature engineering techniques:
+
+  * Bag of Words
+  * TF-IDF
+  * Word Embeddings (Word2Vec / Doc2Vec)
+* Multiple ML models evaluated:
+
+  * Logistic Regression
+  * Support Vector Machine (SVM)
+  * Random Forest
+  * XGBoost
+* Cross-validation for reliable performance estimation
+* Model persistence using `Pickle` for real-time inference
+
+
+
+##  System Architecture
+
+1. **Data Preprocessing**
+
+   * Tokenization
+   * Stopword removal
+   * Stemming/Lemmatization
+   * Text normalization
+
+2. **Feature Engineering**
+
+   * BoW / TF-IDF / Word Embeddings
+
+3. **Model Training**
+
+   * Multiple supervised ML classifiers
+
+4. **Evaluation**
+
+   * Accuracy, Precision, Recall, F1-score
+   * Cross-validation comparison
+
+5. **Deployment Ready**
+
+   * Serialized model for inference pipeline
+
+
+
+##  Results Summary
+
+| Model               | Accuracy |
+| ------------------- | -------- |
+| Logistic Regression | 62%      |
+| SVM                 | 65%      |
+| Random Forest       | 59%      |
+| XGBoost             | 69%      |
+| Fine tuning XGBoost + w2v              | 69%      |
+
+Best Performing Model: **[Fine tuning XGBoost + w2v ]**
+
+
+## Tech Stack
+
+* Python 
+* Pandas, NumPy
+* Scikit-learn
+* NLTK
+* Gensim (Word Embeddings)
+* XGBoost
+* Matplotlib / Seaborn (Visualization)
+
+
+
+##  Key Learnings
+
+* How semantic representations improve sentiment classification
+* Trade-offs between traditional ML vs embedding-based approaches
+* Importance of feature engineering over model complexity
+* How evaluation metrics reveal model behavior beyond accuracy
+
+
+
+##  How to Run This Project
+
+```bash
+# Clone repository
+git clone https://github.com/jeeva-anand/Semantic-Sentiment-Classification
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run training script
+python train.py
+
+# Run inference
+python predict.py
+```
+
+---
+
+##  Project Structure
 
 ```
-semantic-sentiment-classification/
-│
-├── README.md
-│
 ├── data/
-│   ├── train_tweets  
-│   └── test_tweets
-│
 ├── notebooks/
-│   ├── 01_data_analysis.ipynb
-│   └── 02_preprocessing.ipynb
-|
-├── figures/
-|    ├── confusion_matrix.png
-|    ├── model_accuracy.png
-|    ├── frequency_list.png
-|    ├── wordcloud_overall.png
-|    ├── wordcloud_negative
-|    └── wordcloud_normal.png
-│
-└── src/
-   │
-   ├── vectorizers/
-   │   ├── bow.py
-   │   ├── tfidf.py
-   │   ├── word2vec.py
-   │   └── doc2vec.py
-   │
-   └── models/
-      ├── logistic_regression.py
-      ├── svm.py
-      ├── random_forest.py
-      └── xgboost_model.py
-      
-
-
-
-
-```
-
-## Technologies Used
-
-Python
-Pandas
-NumPy
-Scikit-learn
-NLTK
-Gensim
-XGBoost
-Matplotlib
-Seaborn
-
-## NLP Techniques Used
-
-### Text Preprocessing
-
-The dataset was cleaned using:
-
-Lowercasing
-Removing punctuation
-Removing stopwords
-Tokenization
-
-
-## Stemming
-
-Words were reduced to their root forms using stemming.
-
-Example:
-
-playing → play
-liked → like
-
-This helped reduce vocabulary size.
-
-## Lemmatization
-
-Lemmatization was applied to convert words into meaningful base forms.
-
-Example:
-
-better → good
-running → run
-
-Compared to stemming, lemmatization preserves proper word meaning.
-
-
-## Feature Extraction Techniques
-
-The following text vectorization techniques were explored:
-
-### 1. Bag of Words (BoW)
-
-Converts text into frequency-based vectors.
-
-### 2. TF-IDF
-
-Measures word importance based on frequency and rarity across documents.
-
-### 3. Word Vectors
-
-Word embeddings were used to capture semantic relationships between words.
-
-This approach achieved the best performance of 84% accuracy.
-
-### 4. Document Vectors
-
-Document-level embeddings were used to represent complete sentences/documents numerically.
-
-
-
+├── src/
+│   ├── preprocess.py│   
+│   ├── predict.py
+│   └── train.py
+├── app.py
+├── requirements.txt
+└── README.md
 ```
 
 
-## Machine Learning Models Used
+## If you like this project
 
-The following models were trained and evaluated:
-
-```
-| Model                        | Purpose                              |
-| ---------------------------- | ------------------------------------ |
-| Logistic Regression          | Baseline linear classifier           |
-| Support Vector Machine (SVM) | High-dimensional text classification |
-| Random Forest                | Ensemble learning                    |
-| XGBoost                      | Boosting-based optimized classifier  |
-
-
-```
-
-## Best Result
-
-```
-| Technique   | Model                              | Accuracy |
-| ----------- | ---------------------------------- | -------- |
-| Word Vector | XGBoost                            | **84%**  |
-```
-
-## The models were evaluated using:
-
-Accuracy
-Precision
-Recall
-F1-Score
-Confusion Matrix
-
-
-## Key Learnings
-
-Through this project, I learned:
-
-How NLP preprocessing impacts model performance
-Differences between BoW, TF-IDF, Word2Vec, and Doc2Vec
-How different machine learning algorithms behave on text data
-Importance of feature engineering in NLP tasks
-Model tuning and evaluation techniques
-Future Improvements
-
-## Possible future enhancements include:
-
-Deep Learning models (LSTM, GRU)
-Transformer-based models (BERT)
-Deployment using Flask or Streamlit
-Real-time sentiment prediction web app
-
-
-## 🔗 Author
-
-**Anand R**
->  This project is part of my journey to becoming a Machine Learning Engineer.
-
+Feel free to star ⭐ the repository and contribute improvements!
