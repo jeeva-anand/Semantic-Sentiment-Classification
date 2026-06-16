@@ -24,7 +24,7 @@ This project aims to develop an efficient semantic sentiment classification mode
 * Evaluate model performance using standard classification metrics.
 * Build a reusable sentiment prediction pipeline for unseen text samples.
 
----
+
 
 #  Project Structure
 
@@ -59,7 +59,7 @@ Semantic-Sentiment-Classification/
 └── README.md
 ```
 
----
+
 
 #  Setup Instructions
 
@@ -73,7 +73,7 @@ git clone https://github.com/yourusername/Semantic-Sentiment-Classification.git
 cd Semantic-Sentiment-Classification
 ```
 
----
+
 
 ## 2. Create a Virtual Environment
 
@@ -91,7 +91,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
----
+
 
 ## 3. Install Dependencies
 
@@ -99,7 +99,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
----
+
 
 ## 4. Launch Jupyter Notebook
 
@@ -124,7 +124,7 @@ Run all notebook cells or execute:
 python train.py
 ```
 
----
+
 
 ## Predict Sentiment
 
@@ -142,7 +142,7 @@ Output:
 Positive
 ```
 
----
+
 
 #  Model Pipeline
 
@@ -208,7 +208,7 @@ Best Performing Model: **[Fine tuning XGBoost + w2v ]**
 https://your-demo-link
 ```
 
----
+
 
 #  Future Improvements
 
