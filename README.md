@@ -1,6 +1,9 @@
 
 # Semantic Sentiment Classification using NLP & Machine Learning
 
+![header](./reports/figures/banner.png)
+
+
 ##  Project Description
 
 Semantic Sentiment Classification is a Natural Language Processing (NLP) project that classifies text into sentiment categories by understanding the semantic meaning of the input rather than relying only on keyword matching. The project explores multiple text representation techniques and machine learning algorithms to identify whether a given text expresses a positive, negative, or neutral sentiment.
@@ -216,13 +219,6 @@ https://your-demo-link
 * Deploy using Flask or FastAPI
 * Build a web interface for real-time sentiment prediction
 * Extend to multilingual sentiment analysis
-
-
-#  Author
-
-**Jeeva Anand**
-
-Machine Learning & Data Science Enthusiast
 
 
 # If you like this project
