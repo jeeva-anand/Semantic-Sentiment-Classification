@@ -3,4 +3,5 @@ pandas
 numpy
 scikit-learn
 nltk
-xgboost>=2.0.0
+xgboost
+joblib
