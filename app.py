@@ -2,7 +2,7 @@
    
    
 import streamlit as st
-from predict import predict_sentiment
+from src.predict import predict_sentiment
 
 
 st.set_page_config(
