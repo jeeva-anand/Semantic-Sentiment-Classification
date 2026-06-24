@@ -1,7 +1,8 @@
+joblib>=1.3.0
 streamlit
 pandas
 numpy
 scikit-learn
 nltk
 xgboost
-joblib
+
