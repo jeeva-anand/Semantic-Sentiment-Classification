@@ -7,7 +7,7 @@ import streamlit as st
 import joblib
 
 
-from src.preprocess import clean_text
+from preprocess import clean_text
 
 # ml_model = pickle.load(open("models/XGBClassifier-model.pkl", "rb"))
 
