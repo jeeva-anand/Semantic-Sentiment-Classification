@@ -2,8 +2,13 @@ import re
 import nltk
 from nltk import PorterStemmer
 from nltk.corpus import stopwords
-nltk.download('stopwords')
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
+
 stop_words = set(stopwords.words('english'))
+    
 ps = PorterStemmer()
 
 def clean_text(text):
