@@ -8,27 +8,10 @@ import streamlit as st
 
 from src.preprocess import clean_text
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-MODEL_PATH = os.path.join(BASE_DIR, "..", "models", "XGBClassifier-model.pkl")
-VECTOR_PATH = os.path.join(BASE_DIR, "..", "models", "word2vec-model.pkl")
-
-MODEL_PATH = os.path.normpath(MODEL_PATH)
-VECTOR_PATH = os.path.normpath(VECTOR_PATH)
+ml_model = pickle.load(open("models/XGBClassifier-model.pkl", "rb"))
+vector_model = pickle.load(open("models/word2vec-model.pkl", "rb"))
 
 
-@st.cache_resource
-def load_models():
-    with open(MODEL_PATH, "rb") as f:
-        ml_model = pickle.load(f)
-
-    with open(VECTOR_PATH, "rb") as f:
-        vector_model = pickle.load(f)
-
-    return ml_model, vector_model
-
-
-ml_model, vector_model = load_models()
 
 def word_vector(token, size):
   vec = np.zeros(size).reshape((1, size))
