@@ -8,7 +8,9 @@ import streamlit as st
 
 from src.preprocess import clean_text
 
-ml_model = pickle.load(open("models/XGBClassifier-model.pkl", "rb"))
+# ml_model = pickle.load(open("models/XGBClassifier-model.pkl", "rb"))
+
+model = joblib.load(open("models/XGBClassifier-model.pkl", "rb"))
 vector_model = pickle.load(open("models/word2vec-model.pkl", "rb"))
 
 
