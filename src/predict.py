@@ -8,11 +8,11 @@ from src.preprocess import clean_text
 
 
 ml_model = pickle.load(
-    open("./models/XGBClassifier-model.pkl", "rb")
+    open("../models/XGBClassifier-model.pkl", "rb")
 )
 
 vector_model = pickle.load(
-    open("./models/word2vec-model.pkl", "rb")
+    open("../models/word2vec-model.pkl", "rb")
 )
 
 
