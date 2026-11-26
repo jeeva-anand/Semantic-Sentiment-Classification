@@ -5,13 +5,14 @@ from src.exception import CustomException
 from dataclasses import dataclass
 import os
 import sys
+import pandas as pd
 
 
 @dataclass
 class DataIngestionConfig:
   raw_data_path = os.path.join('artifacts', 'data.csv')
   train_data_path = os.path.join('artifacts', 'train.csv')
-  test_data_path = os.path.join('artifacts', 'test')
+  test_data_path = os.path.join('artifacts', 'test.csv')
 
 
 class DataIngestion:
@@ -23,23 +24,23 @@ class DataIngestion:
 
     try:
 
-      train = pd.read_csv('')
-      test = pd.read_csv('')
+      train = pd.read_csv('notebooks/data/train_E6oV3lV.csv')
+      test = pd.read_csv('notebooks/data/test-train.csv')
       raw = pd.concat([train, test], ignore_index=True)
 
       logging.info("Read the dataset as dataframe")
 
-      os.makedirs(os.join.dirname(
-          self.data_ingestion_ojb.raw_data_path), exist_ok=True)
+      os.makedirs(os.path.dirname(
+          self.data_ingestion_obj.raw_data_path), exist_ok=True)
 
-      raw.to_csv(self.data_ingestion_ojb.raw_data_path,
+      raw.to_csv(self.data_ingestion_obj.raw_data_path,
                  index=False, header=True)
-      train.to_csv(self.data_ingestion_ojb.train_data_path,
+      train.to_csv(self.data_ingestion_obj.train_data_path,
                    index=False, header=True)
-      test.to_csv(self.data_ingestion_ojb.test_data_path,
+      test.to_csv(self.data_ingestion_obj.test_data_path,
                   index=False, header=True)
 
-      return (self.data_ingestion_ojb.train_data_path, self.data_ingestion_ojb.test_data_path)
+      return (self.data_ingestion_obj.train_data_path, self.data_ingestion_obj.test_data_path)
 
     except Exception as e:
       raise CustomException(e, sys)

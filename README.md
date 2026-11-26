@@ -12,6 +12,12 @@ The implementation includes data preprocessing, feature engineering, model train
 
 ##  Live Demo
 
+##  Live Demo
+
+
+![Streamlit App ](<reports/figures/sentiment-model-demo.gif>)
+
+
 
 ![Streamlit App ](<reports/figures/sentiment-model-demo.gif>)
 
