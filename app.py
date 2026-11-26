@@ -1,9 +1,10 @@
 
-   
-   
 import streamlit as st
-from src.predict import predict_sentiment
+import os
+import sys
 
+from src.predict import predict_sentiment
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 st.set_page_config(
     page_title="Sentiment  Analyzer",
@@ -47,7 +48,10 @@ if analyze:
             confidence = max(probability)
         else:
             # confidence = probability if prediction == 1 else (1 - probability)
-            confidence = float(probability[0][1])
+            if prediction == 1:
+                confidence = float(probability[0][1])
+            else:
+                confidence = float(probability[0][0])
 
         
         st.markdown("---")

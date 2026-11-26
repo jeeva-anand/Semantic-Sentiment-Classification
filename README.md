@@ -10,7 +10,10 @@ Semantic Sentiment Classification is a Natural Language Processing (NLP) project
 
 The implementation includes data preprocessing, feature engineering, model training, evaluation, and prediction, providing a complete sentiment analysis pipeline suitable for research and real-world applications.
 
+##  Live Demo
 
+
+![Streamlit App ](<reports/figures/sentiment-model-demo.gif>)
 
 ##  Problem Statement
 
@@ -61,6 +64,7 @@ Semantic-Sentiment-Classification/
 ├── app.py
 └── README.md
 ```
+
 
 
 
